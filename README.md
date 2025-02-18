@@ -50,4 +50,5 @@ If this algorithm is functioning properly, it should do one of two things: in ti
 
 # UPDATES
 
-2025/2/3 - Added a multiplier to the trailing stop so that ETFs wouldn't instantly sell within a few days.
+2025/2/3 - Added a multiplier to the trailing stop so that ETFs wouldn't instantly sell within a few days
+2025/2/18 - Fixed a bug that would end the kelly weighting if an all positive or all negative array was detected
