@@ -9,12 +9,12 @@ This algorithm follows three central tenets:
 3. A win is always better than a loss, no matter the magnitude. 
 
 To make sure we follow these tenets, we apply the following rules to our algorithm:
-1. ETFs Only: ]]]]
+1. ETFs Only: Since ETFs represent sectors or instruments, they are less likely to suffer catastrophic failures such as bankruptcies. The underlying companies developing these ETFs still could suffer these catastrophies, but this risk tends to be protected by regulatory agencies. 
 2. Volatility-adjusted EMA filtering: This assists the step 3 process by making sure we have ETFs that 1) have been winning recently, and 2) are performing well given their risk. The Kelly weighting system has a bias towards "sure things" like bonds, which is fantastic in times of recession but if we're in an economic boom we'd rather ride out something like tech stocks. This filtering makes sure we're doing exactly that.
 3. Kelly portfolio weights: ]]]
 4. ATR-optimized trailing stop: ]]]]
 
-This new algorithm supports two things that my old one didn't: trailing stops and ]]]]
+This new algorithm supports two things that my old one didn't: dynamic trailing stops and portfolio weights. ]]]
 
 Whenever we can, we're using the 1-month or 21-day time schedule. This theory only really works on shorter time frames -- if your time horizon is longer, you're better off just going straight into the S&P 500. This cuts a lot of the S&P's losses though it will occassionally underperform its wins (except the beautiful occassions where a win is orchestrated by previously winning sectors, in which case you will far exceed the S&P).
 
@@ -52,3 +52,4 @@ If this algorithm is functioning properly, it should do one of two things: in ti
 
 2025/2/3 - Added a multiplier to the trailing stop so that ETFs wouldn't instantly sell within a few days
 2025/2/18 - Fixed a bug that would end the kelly weighting if an all positive or all negative array was detected
+2025/2/24 - Upgraded required packages
